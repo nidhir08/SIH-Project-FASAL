@@ -30,13 +30,13 @@ class _PaymentScreenState extends State<PaymentScreen> {
   void openCheckout() async {
     try {
       var options = {
-        'key': 'rzp_test_QuCbsq1kJTOrdW',
+        'key': process.env.RAZORPAY_KEY,
         'amount': 12000, // in paise (e.g., 12000 paise = 120 INR)
         'currency': 'INR',
         'name': 'Shyamlal',
         'description': 'Flutter Pay',
         'timeout': 60, // in seconds
-        'prefill': {'contact': '8851119444', 'email': 'tgoel029@gmail.com'}
+        'prefill': {'contact': '1234567890', 'email': 'abc029@gmail.com'}
       };
 
       _razorpay.open(options);
